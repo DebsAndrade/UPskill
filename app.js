@@ -19,11 +19,11 @@ const nomeAluna = "Débora Andrade";
 console.log("Nome da aluna: " + nomeAluna);
 
 // Declarar uma variável
-let contador = 1;
-console.log("Contador inicial: " + contador);
-// Atualizar o valor da variável
-contador = contador + 1;
-console.log("Contador atualizado: " + contador);
+// let contador = 1;
+// console.log("Contador inicial: " + contador);
+// // Atualizar o valor da variável
+// contador = contador + 1;
+// console.log("Contador atualizado: " + contador);
 
 // Tipos de dados
 const idade = 30; // Número
