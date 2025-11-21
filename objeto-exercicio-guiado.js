@@ -226,8 +226,8 @@ const votacao = {
             console.log("Houve um empate!");
         }
     },
-    iniciarVotacao: function (totalVotos) {
-        for (let i = 0; i < totalVotos; i++) {
+    iniciarVotacao(totalVotos) {
+        for (let i = 1; i <= totalVotos; i++) {
             if (Math.random() < 0.5) {
                 this.votar("candidato1");
             } else {
@@ -235,10 +235,30 @@ const votacao = {
             }
         }
         this.mostrarResultado();
-    }
+    },
 };
 
 votacao.iniciarVotacao(29); // Simulando votos aleatórios
+
+
+const agenda1 = {
+    contatos: [],
+    adicionarContato: function (nome, telefone) {
+        this.contatos.push({ nome: nome, telefone: telefone });
+        console.log(`\nContato ${nome} adicionado.`);
+    },
+    listarContatos: function () {
+        console.log("\nLista de Contatos:");
+        for (const contato of this.contatos) {
+            console.log(`Nome: ${contato.nome}, Telefone: ${contato.telefone}`);
+        }
+    }
+}
+agenda1.adicionarContato("Débora", "12345-6789");
+agenda1.adicionarContato("Carlos", "98765-4321");
+agenda1.adicionarContato("Ana", "55555-5555");
+agenda1.adicionarContato("Bruno", "44444-4444");
+agenda1.listarContatos();
 
 
 

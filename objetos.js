@@ -89,3 +89,4 @@ const investimento = {
 
 investimento.simular(10); // Testando o método simular com 10 anos
 investimento.simular(5);  // Testando o método simular com 5 anos
+investimento.simular(20); // Testando o método simular com 20 anos
