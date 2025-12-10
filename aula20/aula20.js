@@ -244,8 +244,34 @@ const carrinho = [
     { nome: "Tênis", quantidade: 1, preco: 150 },
 ];
 
+// 27
+
 let totalCarrinho = 0;
 for (const item of carrinho) {
     totalCarrinho += item.quantidade * item.preco;
 }
 console.log(`\nTotal do carrinho: ${totalCarrinho}€`);
+
+// 28 usando spread
+
+function aplicarDesconto(produto, percentagem) {
+    const desconto = produto.preco * (percentagem / 100);
+    const novoPreco = produto.preco - desconto;
+    return {
+        ...produto,
+        preco: novoPreco
+    };
+}
+
+const produtoComDesconto = aplicarDesconto(carrinho[0], 10);
+console.log("\nProduto com desconto:", produtoComDesconto);
+console.log("Produto original:", carrinho[0]);
+
+// 29
+
+function relatorio(...obj) {
+    const total = obj.reduce((acc, n) => acc + n.preco, 0);
+    return `Tens ${carrinho.length} produtos e o total dos produtos é: ${total}€.`;
+}
+
+console.log("\n" + relatorio(...carrinho));
